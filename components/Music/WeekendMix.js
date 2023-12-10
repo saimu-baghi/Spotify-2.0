@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { WeekendMixItem } from './WeekendMixItem';
 import { FaPlay } from 'react-icons/fa';
+import Image from 'next/image';
 
 function WeekendMix() {
     const [itemsToShow, setItemsToShow] = useState(5); // Default to 5 items for XL screens
@@ -37,7 +38,8 @@ function WeekendMix() {
                     return (
                         <button className="group relative flex flex-col items-center rounded-md overflow-hidden gap-y-4 bg-neutral-100/10 hover:bg-neutral-100/20 transition p-4 text-left" key={index}>
                              <div className="relative">
-                                <img className='rounded-md' src={item.image} alt={item.title} />
+                                {/* <img className='rounded-md' src={item.image} alt={item.title} /> */}
+                                <Image className='rounded-md' src={item.image} alt={item.title} width={200} height={200}/>
                                 <div className="absolute bottom-4 right-4">
                                     <div className="bg-green-500 p-4 rounded-full transition opacity-0 group-hover:opacity-100 hover:scale-110">
                                         <FaPlay className="text-black" />
