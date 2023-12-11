@@ -5,168 +5,99 @@ export const PlaylistItem = [
     list: [
       {
         title: "Christmas Classics",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         title: "Christmas Classics",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         title: "Christmas Classics",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         title: "Christmas Classics",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         title: "Christmas Classics",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         title: "Christmas Classics",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         title: "Christmas Classics",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         title: "Christmas Classics",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         title: "Christmas Classics",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         title: "Christmas Classics",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         title: "Christmas Classics",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         title: "Christmas Classics",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         title: "Christmas Classics",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         title: "Christmas Classics",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         title: "Christmas Classics",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         title: "Christmas Classics",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
-      },
-      {
-        title: "Christmas Classics",
-        description: "Timeless heart",
-        image: 'https://picsum.photos/500',
-      },
-      {
-        title: "Christmas Classics",
-        description: "Timeless heart",
-        image: 'https://picsum.photos/500',
-      },
-      {
-        title: "Christmas Classics",
-        description: "Timeless heart",
-        image: 'https://picsum.photos/500',
-      },
-      {
-        title: "Christmas Classics",
-        description: "Timeless heart",
-        image: 'https://picsum.photos/500',
-      },
-      {
-        title: "Christmas Classics",
-        description: "Timeless heart",
-        image: 'https://picsum.photos/500',
-      },
-      {
-        title: "Christmas Classics",
-        description: "Timeless heart",
-        image: 'https://picsum.photos/500',
-      },
-      {
-        title: "Christmas Classics",
-        description: "Timeless heart",
-        image: 'https://picsum.photos/500',
-      },
-      {
-        title: "Christmas Classics",
-        description: "Timeless heart",
-        image: 'https://picsum.photos/500',
-      },
-      {
-        title: "Christmas Classics",
-        description: "Timeless heart",
-        image: 'https://picsum.photos/500',
-      },
-      {
-        title: "Christmas Classics",
-        description: "Timeless heart",
-        image: 'https://picsum.photos/500',
-      },
-      {
-        title: "Christmas Classics",
-        description: "Timeless heart",
-        image: 'https://picsum.photos/500',
-      },
-      {
-        title: "Christmas Classics",
-        description: "Timeless heart",
-        image: 'https://picsum.photos/500',
-      },
-      {
-        title: "Christmas Classics",
-        description: "Timeless heart",
-        image: 'https://picsum.photos/500',
-      },
-      {
-        title: "Christmas Classics",
-        description: "Timeless heart",
-        image: 'https://picsum.photos/500',
-      },
-      {
-        title: "Christmas Classics",
-        description: "Timeless heart",
-        image: 'https://picsum.photos/500',
-      },
-      {
-        title: "Christmas Classics",
-        description: "Timeless heart",
-        image: 'https://picsum.photos/500',
-      },
-      {
-        title: "Christmas Classics",
-        description: "Timeless heart",
-        image: 'https://picsum.photos/500',
+        songUrl: './songs/Billie Eilish & Eminem - Welcome Home.mp3'
       }
     ]
   },
@@ -176,28 +107,33 @@ export const PlaylistItem = [
     list: [
       {
         title: "Hello",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Eminem - Mockingbird.mp3'
       },
       {
         title: "Hello",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Eminem - Mockingbird.mp3'
       },
       {
         title: "Hello",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Eminem - Mockingbird.mp3'
       },
       {
         title: "Hello",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         title: "Hello",
-        description: "Timeless heart",
+        artist: "Timeless heart",
         image: 'https://picsum.photos/500',
+        songUrl: './songs/Billie Eilish & Eminem - Welcome Home.mp3'
       }
     ]
   },
