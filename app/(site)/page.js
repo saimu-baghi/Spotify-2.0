@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import ListItem from '@/components/ListItem';
-import WeekendMix from '@/components/Music/WeekendMix';
+import Playlist from '@/components/Playlist';
+import Link from 'next/link';
 
 function Home() {
   return (
@@ -13,15 +14,15 @@ function Home() {
           </div>
         </div> */}
       </Header>
-      <div className="mt-2 mb-7 px-6">
-        <div className="flex justify-between items-center">
-          <a href='#' className="text-white text-2xl font-bold hover:underline">
+      <div>
+        {/* <div className="flex justify-between items-center">
+          <Link href="/Playlist" className="text-white text-2xl font-bold hover:underline">
             Weekend Mix
-          </a>
-          <a href='#' className='text-neutral-400 hover:underline font-semibold'>Show all</a>
-        </div>
+          </Link>
+          <Link href='/playlist' className='text-neutral-400 hover:underline font-semibold'>Show all</Link>
+        </div> */}
         <div className='flex flex-row'>
-          <WeekendMix />
+          <Playlist />
         </div>
       </div>
     </div>
