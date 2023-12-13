@@ -155,10 +155,10 @@ function MediaItem({ expandPlayer, isExpanded, selectedItem, selectedPlaylist })
             </button>
           </div> */}
         </div>
-        <div onClick={handleClick} className={`${isExpanded ? 'hidden' : ''} cursor-pointer`}>
+        <div onClick={handleClick} className={`${isExpanded ? 'hidden' : 'hidden md:block'} cursor-pointer`}>
         <MdExpandLess size={35} className="p-2 hover:bg-neutral-800/50 rounded-full"/>
       </div>
-    <div onClick={handleClick} className={`${isExpanded ? '' : 'hidden'}  cursor-pointer pt-8`}>
+    <div onClick={handleClick} className={`${isExpanded ? 'hidden md:block' : 'hidden'}  cursor-pointer pt-8`}>
         <MdExpandMore size={35} className="p-2 hover:bg-neutral-800/50 rounded-full"/>
       </div>
     </div>
