@@ -1,4 +1,5 @@
 "use client"
+import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react';
 import { PlaylistItem } from "@/components/PlaylistItem";
 import { FaPlay } from 'react-icons/fa';
@@ -9,9 +10,12 @@ function Label() {
     const [isLoading, setIsLoading] = useState(true);
     const [selectedCategory, setSelectedCategory] = useState(null);
 
+    const searchParams = useSearchParams();
     useEffect(() => {
-        const currentUrl = new URL(window.location.href);
-        const label = currentUrl.searchParams.get("id");
+  const label = searchParams.get('id');
+
+        // const currentUrl = new URL(window.location.href);
+        // const label = currentUrl.searchParams.get("id");
         const foundCategory = PlaylistItem.find(category => category.label === `${label}`);
 
         if (foundCategory) {
@@ -20,7 +24,7 @@ function Label() {
             setSelectedCategory(null);
         }
         setIsLoading(false);
-    }, []);
+    }, [searchParams]);
 
     if (isLoading) {
         return <p>Loading...</p>;

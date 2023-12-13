@@ -4,8 +4,10 @@ import { FaPlay } from 'react-icons/fa';
 import Image from 'next/image';
 import { PlaylistItem } from './PlaylistItem';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 function Playlist() {
+    const router = useRouter();
     const [itemsToShow, setItemsToShow] = useState(5);
     const [itemWidth, setItemWidth] = useState(200); // Initial item width
 
@@ -41,16 +43,27 @@ function Playlist() {
             {PlaylistItem.map((category, categoryIndex) => (
                 <div key={categoryIndex} className='mt-2 mb-7 px-6'>
                     <div className="flex justify-between items-center">
-                        <Link key={category} href={`/playlist/${encodeURIComponent(category.href)}?id=${encodeURIComponent(category.label)}`} className="text-white text-2xl font-bold hover:underline">
+                        <Link key={category} href={{
+                            pathname: `/playlist/${category.href}`,
+                            query: {
+                                id: category.label,
+                            },
+                        }} className="text-white text-2xl font-bold hover:underline">
                             {/* <a className="group relative flex flex-col items-center rounded-md overflow-hidden gap-y-4 bg-neutral-100/10 hover:bg-neutral-100/20 transition p-4 text-left" style={{ maxWidth: `${itemWidth}px` }}> */}
                             {category.label}
                             {/* </a> */}
                         </Link>
-                        <Link key={category} href={`/playlist/${encodeURIComponent(category.href)}?id=${encodeURIComponent(category.label)}`} className='text-neutral-400 hover:underline font-semibold'>Show all</Link>
+                        <Link href={{
+                            pathname: `/playlist/${category.href}`,
+                            query: {
+                                id: category.label,
+                            },
+                        }} className='text-neutral-400 hover:underline font-semibold'>Show all</Link>
                     </div>
                     <div className='flex gap-4 mt-2 overflow-x-auto' style={{ maxWidth: '100%' }}>
                         {category.list.slice(0, itemsToShow).map((item, index) => (
                             <button
+                                onClick={() => router.push(`?playlist=${encodeURIComponent(category.label)}&id=${encodeURIComponent(item.id)}`)}
                                 className="group relative flex flex-col items-center rounded-md overflow-hidden gap-y-4 bg-neutral-100/10 hover:bg-neutral-100/20 transition p-4 text-left"
                                 key={index}
                                 style={{ maxWidth: `${itemWidth}px` }}
