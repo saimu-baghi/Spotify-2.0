@@ -46,7 +46,7 @@ function Player() {
     }, [searchParams, selectedPlaylist, selectedItem]);
   
     if (isLoading) {
-      return <p>Loading...</p>;
+      return;
     }
   
     if (!selectedItem) {

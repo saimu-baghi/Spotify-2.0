@@ -1,5 +1,5 @@
 "use client"
-import { useSearchParams } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react';
 import { PlaylistItem } from "@/components/PlaylistItem";
 import { FaPlay } from 'react-icons/fa';
@@ -9,10 +9,11 @@ import Header from '@/components/Header';
 function Label() {
     const [isLoading, setIsLoading] = useState(true);
     const [selectedCategory, setSelectedCategory] = useState(null);
+    const router = useRouter();
 
     const searchParams = useSearchParams();
     useEffect(() => {
-  const label = searchParams.get('id');
+  const label = searchParams.get('playlist');
 
         // const currentUrl = new URL(window.location.href);
         // const label = currentUrl.searchParams.get("id");
@@ -38,12 +39,14 @@ function Label() {
         <div className='bg-neutral-900 rounded-lg h-full w-full overflow-hidden overflow-y-auto'>
         <Header />
         <div className='p-6'>
-            <div key={selectedCategory.label}><h1 className="text-white text-2xl font-bold">
+            <div key={selectedCategory.label}><h1 className="text-white text-2xl font-bold capitalize">
             {selectedCategory.label}
                 </h1></div>
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 overflow-x-auto gap-4 mt-2'>
                 {selectedCategory.list.map((item, index) => (
-                    <button className="group relative flex flex-col items-center rounded-md overflow-hidden gap-y-4 bg-neutral-100/10 hover:bg-neutral-100/20 transition p-4 text-left" key={index}>
+                    <button
+                    onClick={() => router.push(`?playlist=${encodeURIComponent(selectedCategory.label)}&id=${encodeURIComponent(item.id)}`)}
+                     className="group relative flex flex-col items-center rounded-md overflow-hidden gap-y-4 bg-neutral-100/10 hover:bg-neutral-100/20 transition p-4 text-left" key={index}>
                         <div className="relative">
                             <Image className='rounded-md' src={item.image} alt={item.title} width={200} height={200} />
                             <div className="absolute bottom-4 right-4">
@@ -52,10 +55,10 @@ function Label() {
                                 </div>
                             </div>
                         </div>
-                        <div className='flex flex-col w-full text-left'>
-                            <h3 className='text-lg font-bold'>{item.title}</h3>
-                            <p className='text-sm'>{item.description}</p>
-                        </div>
+                        <div className='flex flex-col w-full text-left capitalize'>
+                                    <h3 className='text-lg font-bold truncate'>{item.title}</h3>
+                                    <p className='text-sm truncate'>{item.artist}</p>
+                                </div>
                     </button>
                 ))}
             </div>

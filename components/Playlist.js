@@ -39,16 +39,16 @@ function Playlist() {
     }, [itemsToShow]);
 
     return (
-        <div className='mt-4'>
+        <div className='mt-4 '>
             {PlaylistItem.map((category, categoryIndex) => (
                 <div key={categoryIndex} className='mt-2 mb-7 px-6'>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center ">
                         <Link key={category} href={{
-                            pathname: `/playlist/${category.href}`,
+                            pathname: `/playlist/${category.label}`,
                             query: {
-                                id: category.label,
+                                playlist: category.label,
                             },
-                        }} className="text-white text-2xl font-bold hover:underline">
+                        }} className="text-white text-2xl font-bold hover:underline capitalize">
                             {/* <a className="group relative flex flex-col items-center rounded-md overflow-hidden gap-y-4 bg-neutral-100/10 hover:bg-neutral-100/20 transition p-4 text-left" style={{ maxWidth: `${itemWidth}px` }}> */}
                             {category.label}
                             {/* </a> */}
@@ -56,7 +56,7 @@ function Playlist() {
                         <Link href={{
                             pathname: `/playlist/${category.href}`,
                             query: {
-                                id: category.label,
+                                playlist: category.label,
                             },
                         }} className='text-neutral-400 hover:underline font-semibold'>Show all</Link>
                     </div>
@@ -76,9 +76,9 @@ function Playlist() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='flex flex-col w-full text-left'>
-                                    <h3 className='text-lg font-bold'>{item.title}</h3>
-                                    <p className='text-sm'>{item.artist}</p>
+                                <div className='flex flex-col w-full text-left capitalize'>
+                                    <h3 className='text-lg font-bold truncate'>{item.title}</h3>
+                                    <p className='text-sm truncate'>{item.artist}</p>
                                 </div>
                             </button>
 

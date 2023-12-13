@@ -48,8 +48,8 @@ function MediaItem({ expandPlayer, isExpanded, selectedItem, selectedPlaylist })
             className="rounded-md"
           />
         </div>
-        <div className="flex flex-col space-y-1 overflow-hidden">
-          <p className="text-white">{selectedItem.title}</p>
+        <div className="flex flex-col space-y-1 overflow-hidden capitalize">
+          <p className="text-white"><span className="truncate">{selectedItem.title}</span></p>
           <p className="text-neutral-400 text-sm overflow-hidden overflow-ellipsis max-w-[200px]">
             <span className="truncate">By {selectedItem.artist}</span>
           </p>

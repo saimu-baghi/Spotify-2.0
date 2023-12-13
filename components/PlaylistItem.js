@@ -1,158 +1,161 @@
 export const PlaylistItem = [
   {
-    label: "Weekend Mix",
-    href: "/weekendmix",
+    label: "today's hits",
     list: [
       {
         id: "1",
-        title: "Christmas Classics",
-        artist: "Timeless heart",
+        title: "Now that we dont talk",
+        artist: "taylor swift",
         image: 'https://picsum.photos/500',
         songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         id: "2",
-        title: "Christmas Classics",
-        artist: "Timeless heart",
+        title: "Galway Girl",
+        artist: "ed sheeran",
         image: 'https://picsum.photos/500',
         songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         id: "3",
-        title: "Christmas Classics",
-        artist: "Timeless heart",
+        title: "first person shooter",
+        artist: "drake",
         image: 'https://picsum.photos/500',
         songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         id: "4",
-        title: "Christmas Classics",
-        artist: "Timeless heart",
+        title: "chandelier",
+        artist: "sia",
         image: 'https://picsum.photos/500',
         songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         id: "5",
-        title: "Christmas Classics",
-        artist: "Timeless heart",
+        title: "love in the dark",
+        artist: "sia",
         image: 'https://picsum.photos/500',
         songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         id: "6",
-        title: "Christmas Classics",
-        artist: "Timeless heart",
+        title: "therefor i am",
+        artist: "billie eilish",
         image: 'https://picsum.photos/500',
         songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         id: "7",
-        title: "Christmas Classics",
-        artist: "Timeless heart",
+        title: "marie",
+        artist: "anne marie",
         image: 'https://picsum.photos/500',
         songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         id: "8",
-        title: "Christmas Classics",
-        artist: "Timeless heart",
+        title: "shake it off",
+        artist: "taylor swift",
         image: 'https://picsum.photos/500',
         songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
         id: "9",
-        title: "Christmas Classics",
-        artist: "Timeless heart",
+        title: "whatever it takes",
+        artist: "imagine dragons",
         image: 'https://picsum.photos/500',
         songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
-        id: "1",
-        title: "Christmas Classics",
-        artist: "Timeless heart",
+        id: "10",
+        title: "wrecked",
+        artist: "imagine dragons",
+        image: 'https://picsum.photos/500',
+        songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
+      },
+    ]
+  },
+  {
+    label: "hip hop",
+    list: [
+      {
+        id: "30",
+        title: "rap god",
+        artist: "eminem",
+        image: 'https://picsum.photos/500',
+        songUrl: '/songs/Eminem - Mockingbird.mp3'
+      },
+      {
+        id: "31",
+        title: "love the way you lie",
+        artist: "eminem",
+        image: 'https://picsum.photos/500',
+        songUrl: '/songs/Eminem - Mockingbird.mp3'
+      },
+      {
+        id: "32",
+        title: "the real slim shady",
+        artist: "eminem",
+        image: 'https://picsum.photos/500',
+        songUrl: '/songs/Eminem - Mockingbird.mp3'
+      },
+      {
+        id: "33",
+        title: "IDGAF",
+        artist: "drake",
         image: 'https://picsum.photos/500',
         songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
-        id: "11",
-        title: "Christmas Classics",
-        artist: "Timeless heart",
+        id: "34",
+        title: "anti",
+        artist: "taylor swift",
         image: 'https://picsum.photos/500',
         songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
-        id: "12",
-        title: "Christmas Classics",
-        artist: "Timeless heart",
-        image: 'https://picsum.photos/500',
-        songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
-      },
-      {
-        id: "13",
-        title: "Christmas Classics",
-        artist: "Timeless heart",
-        image: 'https://picsum.photos/500',
-        songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
-      },
-      {
-        id: "14",
-        title: "Christmas Classics",
-        artist: "Timeless heart",
-        image: 'https://picsum.photos/500',
-        songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
-      },
-      {
-        id: "15",
-        title: "Christmas Classics",
-        artist: "Timeless heart",
-        image: 'https://picsum.photos/500',
-        songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
-      },
-      {
-        id: "16",
-        title: "Christmas Classics",
-        artist: "Timeless heart",
+        id: "35",
+        title: "another late night",
+        artist: "drake",
         image: 'https://picsum.photos/500',
         songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
       }
     ]
   },
   {
-    label: "Focus",
-    href: "/focus",
+    label: "pop",
     list: [
       {
-        id: "30",
-        title: "Hello",
-        artist: "Timeless heart",
+        id: "50",
+        title: "is it over now?",
+        artist: "taylor swift",
         image: 'https://picsum.photos/500',
         songUrl: '/songs/Eminem - Mockingbird.mp3'
       },
       {
-        id: "31",
-        title: "Hello",
-        artist: "Timeless heart",
+        id: "51",
+        title: "no time to die",
+        artist: "billie eilish",
         image: 'https://picsum.photos/500',
         songUrl: '/songs/Eminem - Mockingbird.mp3'
       },
       {
-        id: "32",
-        title: "Hello",
-        artist: "Timeless heart",
+        id: "52",
+        title: "2step",
+        artist: "ed sheeran",
         image: 'https://picsum.photos/500',
         songUrl: '/songs/Eminem - Mockingbird.mp3'
       },
       {
-        id: "33",
-        title: "Hello",
-        artist: "Timeless heart",
+        id: "53",
+        title: "i'm still here",
+        artist: "sia",
         image: 'https://picsum.photos/500',
         songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
       },
       {
-        id: "34",
-        title: "Hello",
-        artist: "Timeless heart",
+        id: "54",
+        title: "anti",
+        artist: "taylor swift",
         image: 'https://picsum.photos/500',
         songUrl: '/songs/Billie Eilish & Eminem - Welcome Home.mp3'
       }
