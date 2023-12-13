@@ -77,8 +77,8 @@ function Playlist() {
                                     </div>
                                 </div>
                                 <div className='flex flex-col w-full text-left capitalize'>
-                                    <h3 className='text-lg font-bold truncate'>{item.title}</h3>
-                                    <p className='text-sm truncate'>{item.artist}</p>
+                                    <h3 className='text-lg font-bold '>{item.title}</h3>
+                                    <p className='text-sm '>{item.artist}</p>
                                 </div>
                             </button>
 
