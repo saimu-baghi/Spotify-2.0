@@ -1,45 +1,53 @@
-import React from 'react';
-import { twMerge } from "tailwind-merge";
-import Box from './Box';
+"use client";
 
-function Slider() {
-    return (
-        <div 
-          className={twMerge(`
-            flex 
+import * as RadixSlider from '@radix-ui/react-slider';
+
+const Slider = ({ 
+  value = 1, 
+  onChange
+}) => {
+  const handleChange = (newValue) => {
+    onChange?.(newValue[0]);
+  };
+
+  return ( 
+    <RadixSlider.Root
+      className="
+        relative 
+        flex 
+        items-center 
+        select-none 
+        touch-none 
+        w-full 
+        h-10
+      "
+      defaultValue={[1]}
+      value={[value]}
+      onValueChange={handleChange}
+      max={1}
+      step={0.1}
+      aria-label="Volume"
+    >
+      <RadixSlider.Track 
+        className="
+          bg-neutral-600 
+          relative 
+          grow 
+          rounded-full 
+          h-[3px]
+        "
+      >
+        <RadixSlider.Range 
+          className="
+            absolute 
+            bg-white 
+            rounded-full 
             h-full
-            `,
-            // player.activeId && 'h-[calc(100%-80px)]'
-          )}
-        >
-          <div 
-            className="
-              hidden 
-              md:flex 
-              flex-col 
-              gap-y-2 
-              bg-black 
-              h-full 
-              w-[300px] 
-              p-2
-            "
-          >
-            {/* <Box>
-              <div className="flex flex-col gap-y-4 px-5 py-4">
-                {routes.map((item) => (
-                  <SidebarItem key={item.label} {...item} />
-                ))}
-              </div>
-            </Box>
-            <Box className="overflow-y-auto h-full">
-              <Library songs={songs} />
-            </Box> */}
-          </div>
-          <main className="h-full flex-1 overflow-y-auto py-2">
-            {/* {children} */}
-          </main>
-        </div>
-      );
-    }
-
-export default Slider
+          " 
+        />
+      </RadixSlider.Track>
+    </RadixSlider.Root>
+  );
+}
+ 
+export default Slider;
