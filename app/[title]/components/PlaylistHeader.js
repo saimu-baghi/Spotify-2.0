@@ -13,11 +13,7 @@ function PlaylistHeader({ playlists }) {
     const [selectedPlaylist, setSelectedPlaylist] = useState(null);
     const searchParams = useSearchParams();
 
-    // Fetch imageUrl unconditionally before any conditional statements
-    let imageUrl = null;
-    if (selectedPlaylist) {
-        imageUrl = useLoadPlaylistImage(selectedPlaylist);
-    }
+    const imageUrl = useLoadPlaylistImage(selectedPlaylist);
 
     useEffect(() => {
         const id = searchParams.get('id');
