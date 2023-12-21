@@ -9,7 +9,7 @@ import LikeButton from "@/components/LikeButton";
 import useOnPlay from "@/hooks/useOnPlay";
 import PlaylistButton from "@/components/PlaylistButton";
 
-const LikedContent = ({
+const UploadsContent = ({
   songs
 }) => {
   const router = useRouter();
@@ -34,7 +34,7 @@ const LikedContent = ({
           text-neutral-400
         "
       >
-        No liked songs.
+        You have no uploaded songs.
       </div>
     )
   }
@@ -56,4 +56,4 @@ const LikedContent = ({
   );
 }
  
-export default LikedContent;
+export default UploadsContent;

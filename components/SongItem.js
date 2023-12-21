@@ -49,7 +49,7 @@ const SongItem = ({
           alt="Image"
         />
       </div>
-      <div className="flex flex-col items-start w-full pt-4 gap-y-1">
+      <div className="flex flex-col items-start w-full pt-4 gap-y-1 capitalize">
         <p className="font-semibold truncate w-full">
           {data.title}
         </p>

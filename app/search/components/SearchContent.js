@@ -2,6 +2,7 @@
 
 import MediaItem from "@/components/MediaItem";
 import LikeButton from "@/components/LikeButton";
+import PlaylistButton from "@/components/PlaylistButton";
 import useOnPlay from "@/hooks/useOnPlay";
 
 const SearchContent = ({
@@ -40,6 +41,7 @@ const SearchContent = ({
             />
           </div>
           <LikeButton songId={song.id} />
+          <PlaylistButton songId={song.id} />
         </div>
       ))}
     </div>

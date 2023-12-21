@@ -11,6 +11,7 @@ import usePlayer from "@/hooks/usePlayer";
 import LikeButton from "./LikeButton";
 import MediaItem from "./MediaItem";
 import Slider from "./Slider";
+import PlaylistButton from "./PlaylistButton";
 
 const PlayerContent = ({ 
   song, 
@@ -97,6 +98,7 @@ const PlayerContent = ({
           <div className="flex items-center gap-x-4">
             <MediaItem data={song} />
             <LikeButton songId={song.id} />
+            <PlaylistButton songId={song.id} />
           </div>
         </div>
 

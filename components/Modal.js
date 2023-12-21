@@ -4,10 +4,12 @@ import React from 'react';
 
 import useAuthModal from "@/hooks/useAuthModal";
 import useUploadModal from "@/hooks/useUploadModal";
+import useCreatePlaylistModal from "@/hooks/useCreatePlaylistModal";
 
 function Modal({ isOpen, onChange, title, description, children }) {
     const authModal = useAuthModal();
     const uploadModal = useUploadModal();
+    const createPlaylistModal = useCreatePlaylistModal();
     return ( 
         <Dialog.Root open={isOpen} defaultOpen={isOpen} onOpenChange={onChange}>
           <Dialog.Portal>

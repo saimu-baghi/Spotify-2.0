@@ -1,11 +1,13 @@
 "use client";
 
+import AddToPlayListModal from '@/components/AddToPlayListModal';
 import AuthModal from '@/components/AuthModal';
+import CreatePlaylistModal from '@/components/CreatePlaylistModal';
 import UploadModal from '@/components/UploadModal';
 
 import React, { useEffect, useState } from 'react'
 
-function ModalProvider() {
+function ModalProvider({playlists}) {
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect (() => {
@@ -19,7 +21,9 @@ function ModalProvider() {
   return (
     <>
     <AuthModal />
+    <CreatePlaylistModal />
     <UploadModal/>
+    <AddToPlayListModal playlists={playlists} />
     </>
   )
 }

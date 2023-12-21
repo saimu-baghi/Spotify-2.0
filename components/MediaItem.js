@@ -46,12 +46,12 @@ const MediaItem = ({
       >
         <Image
           fill
-          src={imageUrl || "picsum.com/500"}
+          src={imageUrl || "https://picsum.photos/500"}
           alt="MediaItem"
           className="object-cover"
         />
       </div>
-      <div className="flex flex-col gap-y-1 overflow-hidden">
+      <div className="flex flex-col gap-y-1 overflow-hidden capitalize">
         <p className="text-white truncate">{data.title}</p>
         <p className="text-neutral-400 text-sm truncate">
           By {data.author}

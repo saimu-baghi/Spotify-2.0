@@ -7,10 +7,11 @@ import { useUser } from "@/hooks/useUser";
 import MediaItem from "@/components/MediaItem";
 import LikeButton from "@/components/LikeButton";
 import useOnPlay from "@/hooks/useOnPlay";
-import PlaylistButton from "@/components/PlaylistButton";
+import RemoveFromPlaylistButton from "@/components/RemoveFromPlaylistButton";
 
-const LikedContent = ({
-  songs
+const PlaylistContent = ({
+  songs,
+  playlistId
 }) => {
   const router = useRouter();
   const { isLoading, user } = useUser();
@@ -34,7 +35,7 @@ const LikedContent = ({
           text-neutral-400
         "
       >
-        No liked songs.
+        No songs in this playlist.
       </div>
     )
   }
@@ -49,11 +50,11 @@ const LikedContent = ({
             <MediaItem onClick={(id) => onPlay(id)} data={song} />
           </div>
           <LikeButton songId={song.id} />
-          <PlaylistButton songId={song.id} />
+          <RemoveFromPlaylistButton songId={song.id} playlistId={playlistId} />
         </div>
       ))}
     </div>
   );
 }
  
-export default LikedContent;
+export default PlaylistContent;

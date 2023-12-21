@@ -3,29 +3,34 @@
 import { TbPlaylist } from "react-icons/tb";
 import { AiOutlinePlus } from "react-icons/ai";
 
-import useUploadModal from "@/hooks/useUploadModal";
+// import useUploadModal from "@/hooks/useUploadModal";
 import { useUser } from "@/hooks/useUser";
 import useAuthModal from "@/hooks/useAuthModal";
 import useOnPlay from "@/hooks/useOnPlay";
+import useCreatePlaylistModal from "@/hooks/useCreatePlaylistModal";
 
-import MediaItem from "./MediaItem";
+// import MediaItem from "./MediaItem";
 import ListItem from "./ListItem";
+import PlaylistItem from "./PlaylistItem";
 
 const Library = ({
-  songs
+  // songs,
+  playlists
 }) => {
-  const { user, subscription } = useUser();
-  const uploadModal = useUploadModal();
+  const { user } = useUser();
+  // const uploadModal = useUploadModal();
   const authModal = useAuthModal();
+  const createPlaylistModal = useCreatePlaylistModal();
 
-  const onPlay = useOnPlay(songs);
+  // const onPlay = useOnPlay(songs);
 
   const onClick = () => {
     if (!user) {
       return authModal.onOpen();
     }
 
-    return uploadModal.onOpen();
+    // return uploadModal.onOpen();
+    return createPlaylistModal.onOpen();
   }
 
   return ( 
@@ -49,14 +54,11 @@ const Library = ({
         />
       </div>
       <div className="flex flex-col gap-y-2 mt-4 px-3">
+      <ListItem image="/images/uploads.png" name="Your Uploads" href="uploads" />
       <ListItem image="/images/liked.png" name="Liked Songs" href="liked" />
-        {songs.map((item) => (
-          <MediaItem 
-            onClick={(id) => onPlay(id)} 
-            key={item.id} 
-            data={item}
-          />
-        ))}
+      {playlists.map((item) => (
+        <PlaylistItem key={item.id} data={item} />
+      ))}
       </div>
     </div>
    );
