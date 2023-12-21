@@ -95,7 +95,7 @@ const UploadModal = () => {
   
         router.refresh();
         setIsLoading(false);
-        toast.success('Song created!');
+        toast.success('Song uploaded!');
         reset();
         uploadModal.onClose();
       } catch (error) {
@@ -155,7 +155,7 @@ const UploadModal = () => {
               />
             </div>
             <Button disabled={isLoading} type="submit">
-              Create
+              Upload
             </Button>
           </form>
         </Modal>

@@ -90,7 +90,7 @@ const CreatePlaylistModal = () => {
     return (
         <Modal
           title="Create a playlist"
-          description="Select a playlist name that is meaningful"
+          description="Select a playlist title that is meaningful"
           isOpen={createPlaylistModal.isOpen}
           onChange={onChange}
         >
@@ -102,7 +102,7 @@ const CreatePlaylistModal = () => {
               id="title"
               disabled={isLoading}
               {...register('title', { required: true })}
-              placeholder="playlist name"
+              placeholder="Playlist title"
             />
             <div>
               <div className="pb-1">
