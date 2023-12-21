@@ -13,6 +13,12 @@ function PlaylistHeader({ playlists }) {
     const [selectedPlaylist, setSelectedPlaylist] = useState(null);
     const searchParams = useSearchParams();
 
+    // Fetch imageUrl unconditionally before any conditional statements
+    let imageUrl = null;
+    if (selectedPlaylist) {
+        imageUrl = useLoadPlaylistImage(selectedPlaylist);
+    }
+
     useEffect(() => {
         const id = searchParams.get('id');
         const parsedId = parseInt(id);
@@ -27,14 +33,12 @@ function PlaylistHeader({ playlists }) {
         setIsLoading(false);
     }, [searchParams, playlists]);
 
-    const imageUrl = selectedPlaylist ? useLoadPlaylistImage(selectedPlaylist) : null;
-
     if (isLoading) {
         return <Loading />;
     }
 
     if (!selectedPlaylist) {
-        return <p></p>;
+        return <p>No playlist selected.</p>;
     }
 
     return (
