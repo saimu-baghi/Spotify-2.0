@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import { useSearchParams } from 'next/navigation';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import Header from '@/components/Header';
@@ -27,16 +27,15 @@ function PlaylistHeader({ playlists }) {
         setIsLoading(false);
     }, [searchParams, playlists]);
 
+    const imageUrl = selectedPlaylist ? useLoadPlaylistImage(selectedPlaylist) : null;
 
     if (isLoading) {
-        return <Loading />
+        return <Loading />;
     }
 
     if (!selectedPlaylist) {
         return <p></p>;
     }
-
-    const imageUrl = useLoadPlaylistImage(selectedPlaylist);
 
     return (
         <Header>
