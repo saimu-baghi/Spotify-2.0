@@ -7,6 +7,7 @@ import Header from '@/components/Header';
 import Loading from '../loading';
 import useLoadPlaylistImage from '@/hooks/useLoadPlaylistImage';
 import DeletePlaylistButton from '@/components/DeletePlaylistButton';
+import Error from '../error';
 
 function PlaylistHeader({ playlists }) {
     const [isLoading, setIsLoading] = useState(true);
@@ -34,7 +35,7 @@ function PlaylistHeader({ playlists }) {
     }
 
     if (!selectedPlaylist) {
-        return <p>No playlist selected.</p>;
+        return <Error />;
     }
 
     return (
